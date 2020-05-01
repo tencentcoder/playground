@@ -1,0 +1,35 @@
+linters:
+  # please, do not use `enable-all`: it's deprecated and will be removed soon.
+  # inverted configuration with `enable-all` and `disable` is not scalable during updates of golangci-lint
+  disable-all: true
+  enable:
+    - bodyclose
+    - errcheck
+    - gosec
+    - scopelint
+    - staticcheck
+    - typecheck
+    - deadcode
+    - ineffassign
+    - structcheck
+    - unparam
+    - unused
+    - varcheck
+    - maligned
+    - prealloc
+    - gocognit
+    - gocyclo
+    - nakedret
+    - gosimple
+    - whitespace
+    - gomnd
+
+  # don't enable:
+  # - gochecknoglobals
+  # - gocognit
+  # - godox
+  # - maligned
+  # - prealloc
+run:
+  skip-files:
+    - ".*\\_test\\.go$"
